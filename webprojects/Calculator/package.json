@@ -1,0 +1,23 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/vbakshi123/webprojects.git"
+  },
+  "author": "Vishal Bakshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/vbakshi123/webprojects/issues"
+  },
+  "homepage": "https://gitlab.com/vbakshi123/webprojects#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "my-express-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/vbakshi123/webprojects.git"
+  },
+  "author": "Vishal Bakshi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/vbakshi123/webprojects/issues"
+  },
+  "homepage": "https://gitlab.com/vbakshi123/webprojects#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

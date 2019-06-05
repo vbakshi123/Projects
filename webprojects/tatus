@@ -1,0 +1,89 @@
+[1mdiff --git a/index.html b/index.html[m
+[1mdeleted file mode 100644[m
+[1mindex 30d2312..0000000[m
+[1m--- a/index.html[m
+[1m+++ /dev/null[m
+[36m@@ -1,24 +0,0 @@[m
+[31m-<html>[m
+[31m-<link href="main.css" rel="stylesheet" />[m
+[31m-<body>[m
+[31m-<header>[m
+[31m-    <h1>Javascript Events</h1>[m
+[31m-</header>[m
+[31m-</body>[m
+[31m-[m
+[31m-<ul id="checklist">  [m
+[31m-  <li>[m
+[31m-  <span>Apples</span>[m
+[31m-  <input value="Apples" />[m
+[31m-  </li>[m
+[31m-  <li>[m
+[31m-  <span>Oranges</span>[m
+[31m-  <input value="Oranges" />[m
+[31m-  </li>[m
+[31m-  <li>[m
+[31m-  <span>Bananas</span>[m
+[31m-  <input value="Bananas" />  [m
+[31m-  </li>[m
+[31m-</ul>[m
+[31m-<script src="script.js"></script>[m
+[31m-</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/main.css b/main.css[m
+[1mdeleted file mode 100644[m
+[1mindex c0f5cfc..0000000[m
+[1m--- a/main.css[m
+[1m+++ /dev/null[m
+[36m@@ -1,17 +0,0 @@[m
+[31m-body {[m
+[31m-    font-family: "helvetica neue";[m
+[31m-    color: #666;[m
+[31m-    padding: 0 20%;[m
+[31m-}[m
+[31m-[m
+[31m-li input {[m
+[31m-  display:none;[m
+[31m-}[m
+[31m-[m
+[31m-li.edit span {[m
+[31m-    display: none;[m
+[31m-}[m
+[31m-[m
+[31m-li.edit input {[m
+[31m-    display: initial;[m
+[31m-}[m
+\ No newline at end of file[m
+[1mdiff --git a/script.js b/script.js[m
+[1mdeleted file mode 100644[m
+[1mindex e266785..0000000[m
+[1m--- a/script.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,27 +0,0 @@[m
+[31m-var checklist = document.getElementById("checklist");[m
+[31m-var items = checklist.querySelectorAll("li");[m
+[31m-var inputs = checklist.querySelectorAll("input");[m
+[31m-[m
+[31m-[m
+[31m-for(var i=0; i < items.length; i ++){[m
+[31m-   items[i].addEventListener("click", editItem);[m
+[31m-   inputs[i].addEventListener("blur", updateItem);[m
+[31m-   inputs[i].addEventListener("keypress", itemKeypress);[m
+[31m-}[m
+[31m-[m
+[31m-function editItem(){[m
+[31m-  this.className = "edit";[m
+[31m-  var input = this.querySelector("input");[m
+[31m-  input.focus();[m
+[31m-  input.setSelectionRange(0 , input.value.length);  [m
+[31m-}[m
+[31m-[m
+[31m-function updateItem(){[m
+[31m-  this.previousElementSibling.innerHTML = this.value;[m
+[31m-  this.parentNode.className = "";  [m
+[31m-}[m
+[31m-[m
+[31m-function itemKeypress(event){[m
+[31m-  if (event.which === 13)[m
+[31m-    updateItem.call(this);[m
+[31m-}[m
+\ No newline at end of file[m
