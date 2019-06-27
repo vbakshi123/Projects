@@ -1,0 +1,20 @@
+<%- include("partials/header") -%>
+
+<h1><%= homeHeading %></h1>
+<p> <%= homeStartingContentejs %> </p>
+
+
+<% var postarray = posts; %>
+<% postarray.forEach(function(pos){ %>
+
+<h1><%= pos.heading %></h1>
+<p> <%= (pos.headDetails).substring(0, 100) + "..." %><a href="/posts/<%= pos._id %>" >Read More</a></p>
+
+<%}); %>
+
+
+
+
+
+
+<%- include("partials/footer") -%>
