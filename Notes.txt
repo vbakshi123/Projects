@@ -18,3 +18,7 @@ When boxing happens, the object is stored in heap, (since boxing means getting c
 
 It is better to use var list = new List<int>(); // This keeps all values of type integer, so no boxing/unboxing and no performance penalty.
 
+Polymorphism is to ensure that the implementation of certain methods are defined in the derived classes, instead of the base class. You add the word "virtual" to the method in the base class, and then you add the word "override" in the derived class using the same method name. You then define the implementation of the method in the derived class within the override method. See Screenshots for understanding.
+
+The word abstract is used in any base class'es base method is to ensure that the implementation is defined in the derived classes. The base class also needs to have the word abstract added to it. The word abstract is an extra layer of surety added to polymorphism, so that blank methods are not defined in the derived classes. See the screenshots of polymorphism to understand
+
