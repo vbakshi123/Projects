@@ -1,0 +1,20 @@
+With the 'out' keyword, you can have a return value, more importantly multiple parameters can be passed, and those values can be returned to the caller. Multiple values cannot be returned, if you use void method
+
+When you set the field (which is basically a variable defined within the class) as private for encapsulation, you can access that field only via a method defined within the class. Method in the sense get/set.
+
+Boxing-Unboxing
+
+So, if you use an object from a class, example below
+
+Value type to Reference type - Boxing
+Refernce type to Value Type - Unboxing
+
+var list = new ArrayList();
+list.Add(1);  // The add method takes an object type which is a reference. Here since we are passing an integer, hence boxing will happen, which means the integer 1 will be converted to a reference type, meaning it will be stored in heap. And when, you upcast it using var number = (int)list[0], again it will unboxing will happen because the cast (int) is a value type
+list.Add("Vishal");// Here "Vishal" is a string which is a reference type, so nothing will happen
+list.Add(DateTime.Today); // Here datetime is a struct which is a value type, hence it will be boxed
+
+When boxing happens, the object is stored in heap, (since boxing means getting converted to reference type) and a reference in the stack that points to the object in the heap. So, the value is stored in the heap with an object reference in the stack
+
+It is better to use var list = new List<int>(); // This keeps all values of type integer, so no boxing/unboxing and no performance penalty.
+
